@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>欢迎来到藏文阁</h1>
+    <p class="lead">藏文阁是一个为了便于用户上传和修改文章而开发的网站，在这里你可以和他人分享自己喜欢的文章，也可以览阅其他人上传的文章，仅需注册即可使用，简单方便好上手，欢迎您的使用！ο(=•ω＜=)ρ⌒☆</p>
+    {% if session.logged_in == NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">注册</a>
+      <a href="/login" class="btn btn-success btn-lg">登录</a>
+    {% endif %}
+  </div>
+{% endblock %}
